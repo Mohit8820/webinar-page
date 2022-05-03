@@ -8,7 +8,7 @@ html {
   font-family: "Inter";
   text-align: center;
   color: #171836;
-  background: #e5e5e520;
+  background: #fff;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
@@ -32,18 +32,7 @@ html {
 .dropdown-content.name-dropdown a {
   text-align: center;
 }
-.enroll-now {
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background: linear-gradient(176.18deg, #800080 -2.53%, #7e267e 27.29%);
-  box-shadow: rgb(0, 0, 0, 25%) 0px 4px 5px;
-  display: none;
-}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -546,8 +535,11 @@ main button {
   display: flex;
   align-items: center;
   gap: 2rem;
+  width: 62rem;
+  overflow: scroll;
 }
 .career-cont div {
+  min-width: 14rem;
   width: 14rem;
   height: 6rem;
   border: 0.15rem solid #dddddd;
@@ -571,7 +563,7 @@ main button {
 .details-cont {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .each-det {
   width: 10.1rem;
@@ -599,7 +591,7 @@ main button {
 
 section {
   width: 79rem;
-  margin: 5rem auto;
+  margin: 6rem auto;
 }
 .need h2 span {
   color: rgba(23, 24, 54, 0.35);
@@ -805,32 +797,38 @@ section {
   left: 0rem;
 } */
 .img-border div {
-  width: 21.5rem;
-  height: 21.5rem;
+  width: 28rem;
+  height: 28rem;
   background: #fff;
   position: absolute;
   bottom: 2rem;
   left: 2rem;
   border-radius: 3rem;
+  overflow: hidden;
 }
 .img-border div img {
   transform: rotate(45deg);
   width: 34rem;
   height: auto;
-  top: -8rem;
-  left: -6rem;
+  top: -1.5rem;
+  left: -4rem;
   position: absolute;
-  -webkit-clip-path: polygon(
+  /* -webkit-clip-path: polygon(
     -289px -12rem,
     18rem 34rem,
     51rem 15px,
     128px -28px
   );
-  clip-path: polygon(-289px -12rem, 18rem 34rem, 51rem 15px, 128px -28px);
-  border-radius: 50%;
+  clip-path: polygon(
+    -28.9rem -12rem,
+    18rem 34rem,
+    51rem 1.5rem,
+    12.8rem -2.8rem
+  );
+  border-radius: 50%; */
 }
 .about-speaker {
-  margin: 5rem auto;
+  margin: 5rem auto 0;
 }
 .about-speaker p {
   font-weight: 500;
@@ -846,6 +844,7 @@ section {
 .countdown {
   display: flex;
   gap: 2rem;
+  margin-bottom: 8rem;
 }
 .countdown div {
   display: flex;
@@ -907,6 +906,7 @@ section {
 /* .others:first-of-type {
   margin-left: 4rem;
 } */
+
 .others h4 {
   font-weight: 600;
   font-size: 2rem;
@@ -949,6 +949,7 @@ section {
 
 .others p {
   width: 40.5rem;
+  height: 12rem;
   overflow-y: scroll;
   font-weight: 400;
   font-size: 1.6rem;
@@ -956,26 +957,41 @@ section {
   text-align: left;
   color: #000000;
 }
-/* .others p::-webkit-scrollbar {
+.others p::after {
+  content: "";
+  width: 3.57rem;
+  height: 2.6rem;
+  background: url("qoutes.png") no-repeat;
+  background-size: 3.57rem 2.6rem;
+  top: 7rem;
+  left: 33.5rem;
+  position: absolute;
+  display: inline-block;
+}
+.others p::before {
+  content: "";
+  width: 3.57rem;
+  height: 2.6rem;
+  background: url("inverted-qoutes.png") no-repeat;
+  background-size: 3.57rem 2.6rem;
+  bottom: 7rem;
+  right: 1rem;
+  position: absolute;
+  display: inline-block;
+}
+
+.others p::-webkit-scrollbar {
   display: block;
-  width: 2px;
-  height: 8px;
-  background-color: #372faa;
+  width: 0.2rem;
+  height: 0.8rem;
+  background-color: #00000010;
+  margin-left: 14rem;
+  padding-left: 4rem;
 }
 .others p::-webkit-scrollbar-thumb {
-  background: #b872d0;
+  background: #00000029;
   background-clip: padding-box;
 }
-.others a {
-  text-decoration: none;
-  color: #8a158a;
-  font-weight: 700;
-}
-.grey {
-  font-size: 1.6rem;
-  color: rgba(0, 0, 0, 0.5) !important;
-  font-weight: 600;
-} */
 
 /*******************/
 
@@ -1143,18 +1159,20 @@ section {
 
 #bullets label {
   display: inline-block;
-  width: 1rem;
-  height: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 100%;
-  background: #f4d8e6;
-  margin: 0 0.5rem;
+  background: #c4c4c4;
+  margin: 0 0.3rem;
 }
 
 #frame1:checked ~ #bullets label:nth-child(1),
 #frame2:checked ~ #bullets label:nth-child(2),
 #frame3:checked ~ #bullets label:nth-child(3),
 #frame4:checked ~ #bullets label:nth-child(4) {
-  background: #977bbb;
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: translate(0, 19%);
 }
 
 .questions {
@@ -1223,7 +1241,9 @@ section {
   background: #fff6f6;
   border-radius: 0 0 1rem 1rem;
 }
-
+.meet {
+  overflow: hidden;
+}
 /*.............*/
 @media (max-width: 1400px) {
   html {
@@ -1267,7 +1287,7 @@ section {
 
 @media (max-width: 725px) {
   html {
-    font-size: 50%;
+    font-size: 66.5%;
   }
   /* .card {
     width: 97vw;
@@ -1278,149 +1298,95 @@ section {
     margin: 0;
     box-shadow: rgb(0 0 0 / 10%) 0px 0.1px 7px;
   }
-  .search {
-    width: 60rem;
+  header {
+    padding: 1.5rem 0.7rem 0.8rem;
+    background-color: white;
   }
-
-  .mview {
-    display: inline;
+  .logo {
+    width: 13rem;
+    margin: 0;
   }
-  .premain {
-    padding: 17rem 4rem 6rem;
+  .buttons {
+    gap: 0.7rem;
   }
-
-  .det-cont {
-    grid-template-columns: 1fr 1fr;
-    width: 32rem;
-    margin: auto;
+  .login {
+    width: 4.8rem;
   }
-  .gear {
-    width: 9rem;
-    top: -3.5rem;
+  .login::before {
+    content: none;
   }
-  .semicircle {
+  .sign-up {
+    margin-right: 0.7rem;
     width: 7rem;
-    top: 32rem;
+    height: 4rem;
   }
-  main p {
-    text-align: center;
-    margin-top: 5rem;
+  .menu {
+    width: 3rem;
+    margin-left: 0.7rem;
   }
-  main .disFlex {
+  main {
+    padding: 14rem 2rem 6rem;
+  }
+  .text-part h1 {
+    width: 100%;
+    margin-bottom: 4rem;
+    font-size: 5rem;
+    line-height: 6.1rem;
+  }
+  .img-part {
+    display: none;
+  }
+  .main-flex2 {
     flex-direction: column;
-    padding: 2rem;
-    text-align: center;
-    margin-bottom: 1rem;
+    gap: 0;
   }
-  .minimum {
-    margin-top: 2rem;
+  .career p {
+    padding-left: 2rem;
+  }
+  .career-cont {
+    width: 100vw;
+    padding-left: 2rem;
+    margin-bottom: 4rem;
+  }
+  .details {
+    align-self: flex-start;
   }
 
-  .introdu {
-    width: 85vw;
+  section {
+    width: 90vw;
   }
 
-  .achievement-section .disFlex {
-    grid-template-columns: 1fr 1fr;
+  .need-grid {
+    grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    gap: 3rem;
-    width: 35rem;
+    width: 100%;
+  }
+
+  .overcome-flex {
+    flex-direction: column;
+  }
+
+  .attend-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 32rem;
     margin: 0 auto;
   }
 
-  .recipe .card {
-    width: 80vw;
-  }
-  .recipe ul {
-    width: 100%;
-    height: auto;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr;
-  }
-  .recipe ul li {
-    margin-bottom: 4rem;
-    font-size: 2rem;
-  }
-  .recipe .apply-now {
-    transform: translate(0, -75%);
-  }
-  .li-2,
-  .li-4 {
-    transform: translate(0%, 0);
-  }
-  .li-1::before,
-  .li-3::before,
-  .li-2::before,
-  .li-4::before {
-    height: 6.8rem;
-    bottom: 0;
-    left: -1.7rem;
-    transform: translate(0%, 3%) rotate(0deg);
-  }
-  .roadmap {
-    width: 100vw;
-    margin-top: 4rem;
-  }
-  .roadmap .disFlex {
+  .countdown {
     justify-content: center;
-    gap: 5rem;
   }
-  .step {
-    position: relative;
-  }
-  .step::before {
-    content: "";
-    width: 0.1rem;
-    height: 5rem;
-    background-color: #ecd9ec;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 100%);
-  }
-  .map {
+  .countdown button,
+  .reg {
     display: none;
   }
-
-  .border-cover {
-    height: auto;
-    border: none;
-    flex-direction: column;
-    padding: 0;
-    margin-top: 5rem;
-    gap: 5rem;
+  .takeaway {
+    padding: 1rem 2.5rem;
   }
-  .perks {
-    width: 35.9rem;
-    height: 18rem;
-    position: relative;
-  }
-  .perks::before {
-    content: "";
-    width: 0.1rem;
-    height: 5rem;
-    background-color: #ecd9ec;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 100%);
-  }
-  .perks:last-of-type::before {
-    display: none;
-  }
-
-  .grid-rewards {
-    grid-template-columns: 1fr 1fr;
-    width: 40.2rem;
-  }
-
-  .prog-scope .disFlex {
-    flex-direction: column;
-  }
-
-  .scope {
-    min-width: 30rem;
+  .takeaway h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
   }
   /* .other-courses {
     padding-left: 1rem;
@@ -1434,45 +1400,76 @@ section {
   } */
 
   .others {
-    height: 40rem;
-    width: 38.5rem;
+    flex-direction: column;
+    width: 32rem;
+    height: auto;
+    padding-bottom: 6rem;
+  }
+  #frame1:checked ~ #slides .inner {
+    margin-left: 0;
+  }
+
+  #frame2:checked ~ #slides .inner {
+    margin-left: -33rem;
+  }
+
+  #frame3:checked ~ #slides .inner {
+    margin-left: -67rem;
+  }
+
+  #frame4:checked ~ #slides .inner {
+    margin-left: -99rem;
+  }
+  .intro {
+    margin-top: 3rem;
   }
   .others p {
-    height: 24rem;
+    /* display: flex;
+    align-items: center; */
+    width: 23rem;
+    height: 25rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    text-align: justify;
+    margin-top: 9rem;
+  }
+  .others h4 {
+    bottom: -4rem;
+    right: 5rem;
+  }
+  .others p::before {
+    bottom: 3rem;
+  }
+  .others p::after {
+    top: 29rem;
+    left: 0.5rem;
   }
   #frame {
-    width: 43rem;
+    width: 32rem;
   }
   #frame1:checked ~ #controls label:nth-last-child(1),
   #frame2:checked ~ #controls label:nth-last-child(4),
   #frame3:checked ~ #controls label:nth-last-child(3),
   #frame4:checked ~ #controls label:nth-last-child(2) {
-    margin: 0 0 0 -49rem;
+    margin: -9rem 0 0 -27.5rem;
   }
-  .query-grid {
-    grid-template-columns: 1fr;
+  #frame1:checked ~ #controls label:nth-child(2),
+  #frame2:checked ~ #controls label:nth-child(3),
+  #frame3:checked ~ #controls label:nth-child(4),
+  #frame4:checked ~ #controls label:nth-child(1) {
+    margin: -9rem -1.5rem 0px 0px;
   }
-  .search {
-    width: 42rem;
+  .collapsible p {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+  .content {
+    font-size: 1.4rem;
   }
 
-  footer {
-    grid-template-columns: 1fr 1fr;
-  }
-  .social-links {
-    text-align: right;
-  }
-  .icons {
-    justify-content: flex-end;
-  }
-}
-
-@media (max-width: 500px) {
-  table {
-    width: 95vw;
-  }
   .enroll-now {
-    display: inline;
+    display: none;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -1482,261 +1479,28 @@ section {
     border-radius: 0;
     opacity: 1;
     margin: 0;
-    padding: 3rem;
-  }
-  /* html {
-    font-size: 62.5%;
-    text-align: center;
-  }
-  body {
-    font-size: 1.7rem;
-  } */
-
-  /* h3.gradText,
-  h1.gradText {
-    font-size: 2.4rem !important;
-  } */
-
-  header {
-    padding: 2.1rem 1rem 1.1rem;
-    background-color: white;
-  }
-  .logo {
-    width: 16rem;
-  }
-  .buttons {
-    gap: 0.7rem;
-  }
-  .login {
-    width: 4.8rem;
-  }
-  .login::before {
-    content: none;
-  }
-  .sign-up {
-    margin-right: 1rem;
-    width: 9.4rem;
-    height: 5rem;
-  }
-  .menu {
-    width: 4rem;
-    margin-left: 1rem;
-  }
-  .premain h1 {
-    font-size: 4rem;
-    line-height: 5.4rem;
-    width: 90%;
-    margin-top: 5rem;
-  }
-  .alumni {
-    width: 100%;
-  }
-  .det-cont {
-    width: 38rem;
-    gap: 3rem;
-  }
-  .details {
-    width: 17rem;
-    height: 17rem;
-  }
-  .hear .gradText {
-    padding: 0 2rem;
-  }
-  .others {
-    height: 36.6rem;
-    width: 34rem;
-    padding: 1.5rem 3.5rem;
-  }
-  .others img {
-    width: 10rem;
-    height: 10rem;
-    margin-left: -1.7rem;
-    z-index: 99;
-    transform: translate(0px, 2px);
-  }
-  .others p {
-    height: 20.5rem;
-    font-size: 1.8rem;
-  }
-  .others h4.gradText {
-    font-size: 2rem;
-  }
-  .first-oth {
-    margin-left: 16vw;
-  }
-  #frame {
-    width: 100%;
-    padding: 0;
-  }
-  #frame1:checked ~ #slides .inner {
-    margin-left: 0;
-  }
-
-  #frame2:checked ~ #slides .inner {
-    margin-left: -34rem;
-  }
-
-  #frame3:checked ~ #slides .inner {
-    margin-left: -68rem;
-  }
-
-  #frame4:checked ~ #slides .inner {
-    margin-left: -102rem;
-  }
-  #frame1:checked ~ #controls label:nth-last-child(1),
-  #frame2:checked ~ #controls label:nth-last-child(4),
-  #frame3:checked ~ #controls label:nth-last-child(3),
-  #frame4:checked ~ #controls label:nth-last-child(2) {
-    display: none;
-  }
-  #frame1:checked ~ #controls label:nth-child(2),
-  #frame2:checked ~ #controls label:nth-child(3),
-  #frame3:checked ~ #controls label:nth-child(4),
-  #frame4:checked ~ #controls label:nth-child(1) {
-    margin: 0 -3.5rem 0 0;
-    display: none;
-  }
-  #bullets {
-    display: none;
-  }
-  /* 
-  .other-courses {
-    margin: 0 auto;
-    background: none;
-    padding-top: 1.5rem;
-  }
-
-  .other-courses-card {
-    width: 32rem;
-    height: 19rem;
-    margin: 2rem auto;
-    border-radius: 2rem;
-    padding: 1rem 5rem;
-  }
-  .other-courses-card h3 {
-    margin-top: -1rem;
-    margin-bottom: -0.5rem;
-    font-size: 1.8rem;
-  }
-  .other-courses-card span {
-    font-size: 1.3rem;
-  }
-  .other-courses-card p {
-    font-size: 1rem;
-    font-weight: 400;
-  } */
-
-  /* .other-courses-card::after,
-  .other-courses-card::before {
-    width: 7rem;
-    height: 7rem;
-    font-size: 1.5rem;
-  }
-
-  .other-courses-card::after {
-    right: 2%;
-    background: conic-gradient(
-      at 50%,
-      #800780,
-      #800780cc 20%,
-      #800780 30%,
-      #800780c0 50%,
-      #800780 80%,
-      #800780b9 90%,
-      #800780
-    );
-  } */
-
-  .query {
-    /* background: linear-gradient(to bottom, #3a30aa 55%, #fff 45%); */
-    color: white;
-  }
-  /* .query h3 {
-    background-clip: unset;
-     background: none; 
-  } */
-  .query-asked {
-    width: 37rem;
-    height: 6rem;
-    margin: 1.5rem auto;
-    font-size: 1.6rem;
-    box-shadow: rgb(0, 0, 0, 30%) 0px 3px 5px;
-  }
-  .active-query {
-    height: auto;
-  }
-  .query-asked p {
-    height: 6rem;
-    line-height: 1.8rem;
-  }
-  .query-asked button {
-    top: 1rem;
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-  }
-  .search {
-    width: 40rem;
-    height: 4.5rem;
-    margin: 3rem auto;
-    border-radius: 0.8rem;
-    background-color: #fff;
-    z-index: 0;
-    justify-content: flex-start;
-  }
-  .search input {
-    width: 28rem;
-  }
-  .search-ico {
-    background-color: #fff;
-    z-index: 1;
-    width: 5rem;
-    margin: 0;
-    padding: 1rem;
-    border-radius: 0.8rem 0 0 0.8rem;
-  }
-  .search::before {
-    border-radius: 0.8rem;
-    top: -1px;
-    left: -0.7px;
-    bottom: -1.5px;
-    right: -1.5px;
-    z-index: -1;
-  }
-  .search button {
-    width: 7rem;
-    height: 4.6rem;
-    top: -0.1rem;
-    border-radius: 0 0.8rem 0.8rem 0;
-  }
-  ::placeholder {
-    font-size: 1.4rem;
-    z-index: 999;
-  }
-
-  footer h3 {
-    margin-top: 1.2rem;
-    margin-bottom: 0rem;
-    font-weight: 600;
-  }
-
-  footer ul {
-    margin-left: 2rem;
+    padding: 2rem;
   }
 }
 
-@media (max-width: 395px) {
-  html {
-    font-size: 47%;
+@media (max-width: 500px) {
+  .collapsible::after {
+    right: 0;
   }
 }
-@media (max-width: 376px) {
+
+@media (max-width: 385px) {
   html {
-    font-size: 43%;
+    font-size: 63%;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 365px) {
   html {
-    font-size: 40%;
+    font-size: 60%;
+  }
+}
+@media (max-width: 345px) {
+  html {
+    font-size: 56%;
   }
 }
