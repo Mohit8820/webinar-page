@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  font-size: 65.5%;
   font-family: "Inter";
   text-align: center;
   color: #171836;
@@ -93,7 +93,7 @@ header button {
 main {
   background: #171836;
   color: #eaeaff;
-  padding: 14rem 6rem 6rem;
+  padding: 12rem 6rem 6rem;
   text-align: left;
 }
 .main-flex {
@@ -934,18 +934,19 @@ section {
     font-size: 66.5%;
   }
   header {
-    padding: 0 2rem;
-    height: 6.5rem;
+    display: none;
+    /* padding: 0 2rem;
+    height: 6.5rem; */
   }
-  header img {
+  /* header img {
     height: 4rem;
   }
   header button {
     width: 10.2rem;
     height: 4.5rem;
-  }
+  } */
   main {
-    padding: 13rem 2rem 6rem;
+    padding: 5.1rem 2rem 6rem;
   }
   .text-part h1 {
     width: 100%;
