@@ -72,10 +72,11 @@ header {
   justify-content: space-between;
   height: 7rem;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0rem;
   background: #fff;
   padding: 0 8.6rem;
+  z-index: 9999999999;
 }
 header img {
   height: 5rem;
@@ -932,6 +933,7 @@ section {
 @media (max-width: 725px) {
   html {
     font-size: 66.5%;
+    padding-bottom: 7rem;
   }
   header {
     display: none;
@@ -1096,7 +1098,6 @@ section {
     left: 0;
     z-index: 99999;
     width: 100%;
-    /* height: 8rem; */
     border-radius: 0;
     opacity: 1;
     margin: 0;
