@@ -498,10 +498,14 @@ section {
   line-height: 1.7rem;
 }
 
+.countdown-outer {
+  display: flex;
+  gap: 8rem;
+  margin-bottom: 8rem;
+}
 .countdown {
   display: flex;
   gap: 2rem;
-  margin-bottom: 8rem;
 }
 .countdown div {
   display: flex;
@@ -537,10 +541,9 @@ section {
 #seconds::after {
   content: "seconds";
 }
-.countdown button {
+.countdown-outer button {
   width: 30rem;
   height: 6rem;
-  margin-left: 8rem;
   background: #ff2a2a;
   border: none;
   border-radius: 1rem;
@@ -902,6 +905,25 @@ section {
 .meet {
   overflow: hidden;
 }
+
+.surprise {
+  position: relative;
+  width: 59vw;
+}
+.surprise h3 {
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 6.1rem;
+  text-align: left;
+  margin-bottom: 11rem;
+}
+.surprise img {
+  position: absolute;
+  bottom: -7rem;
+  right: 18rem;
+  width: 17.2rem;
+  height: 17.2rem;
+}
 /*.............*/
 @media (max-width: 1400px) {
   html {
@@ -978,6 +1000,17 @@ section {
   section {
     width: 90vw;
   }
+  .surprise {
+    width: 80vw;
+  }
+  .surprise img {
+    bottom: -20rem;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  .surprise h3 {
+    margin-bottom: 22rem;
+  }
 
   .need-grid {
     grid-template-columns: 1fr;
@@ -997,13 +1030,14 @@ section {
     margin: 0 auto;
   }
 
+  .countdown-outer {
+    flex-direction: column;
+    gap: 2rem;
+  }
   .countdown {
     justify-content: center;
   }
-  .countdown button,
-  .reg {
-    display: none;
-  }
+
   .takeaway {
     padding: 1rem 2.5rem;
   }
